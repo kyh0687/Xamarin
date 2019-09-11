@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Demo.SettingPage"
+             >
+    <ContentPage.Resources>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="{x:Type ImageButton}">
+            <Setter Property="WidthRequest" Value="100"/>
+            <Setter Property="HeightRequest" Value="100"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid Padding="10,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Row="0" Grid.ColumnSpan="3" 
+               Text="User Infomation" FontSize="20"/>
+
+        <ImageButton Grid.Row="1" Grid.Column="0"
+                     x:Name="PhotoImage_Camera"/>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalOptions ="Center" Text="camera"/>
+
+        <ImageButton Grid.Row="1" Grid.Column="1"
+                     x:Name="PhotoImage_Gallery"/>
+        <Label Grid.Row="1" Grid.Column="1" HorizontalOptions ="Center" Text="gallery" />
+
+        <ImageButton Grid.Row="1" Grid.Column="2"
+                     x:Name="PhotoImage_URI"/>
+        <Label Grid.Row="1" Grid.Column="2" HorizontalOptions ="Center" Text="uri"/>
+
+        
+        
+        <Label Grid.Row="2" Text="이름" />
+        <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" 
+               d:Text="---" Text="{Binding Name}" />
+
+        <Label Grid.Row="3" Text="부서" />
+        <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
+               d:Text="---" Text="{Binding Department}" />
+
+        
+
+        <Label Grid.Row="4" Grid.ColumnSpan="3" 
+               Text="Setting" FontSize="20" />
+
+        <Label Grid.Row="5" Text="로그인 여부" />
+        <Switch Grid.Row="5" Grid.Column="1" 
+                x:Name="LoginSwitch" HorizontalOptions="Start"/>
+
+        <Label Grid.Row="6" Text="쿠키 삭제" />
+        <Button Grid.Row="6" Grid.Column="1" 
+                x:Name="CookieButton" Text="COOKIE RESET"/>
+    </Grid>
+</ContentPage>
