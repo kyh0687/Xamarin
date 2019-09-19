@@ -22,9 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\GoodsDetailPage.xaml.cs">
-      <DependentUpon>GoodsDetailPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\GoodsPage.xaml.cs">
       <DependentUpon>GoodsPage.xaml</DependentUpon>
     </Compile>
@@ -36,9 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\GoodsDetailPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\SettingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
