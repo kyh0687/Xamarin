@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Demo.Views.SfButtonPage">
+    <ContentPage.Content>
+        <StackLayout Grid.Column="1" Margin="10">
+            <button:SfButton Text="SfButton" />
+            <button:SfCheckBox Text="SfCheckBox"/>
+            <button:SfChipGroup>
+                <button:SfChip Text="SfChip1"/>
+                <button:SfChip Text="SfChip2"/>
+                <button:SfChip Text="SfChip3"/>
+            </button:SfChipGroup>
+            <button:SfRadioGroup >
+                <button:SfRadioButton Text="SfRadioButton1"/>
+                <button:SfRadioButton Text="SfRadioButton2"/>
+                <button:SfRadioButton Text="SfRadioButton3"/>
+            </button:SfRadioGroup>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

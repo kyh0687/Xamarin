@@ -27,6 +27,10 @@ namespace Demo.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            // Syncfusion Trial Version 인증키.
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTQ0Nzg3QDMxMzcyZTMyMmUzMGw2WnZpd2pqVDA1L2d5WW1zaWJ4LytQaTFRbjY2aVRRTW5PcHFFNFFTOWM9");
+
             LoadApplication(new App());
 
         }

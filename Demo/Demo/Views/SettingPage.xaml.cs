@@ -23,12 +23,12 @@ namespace Demo
         { 
             InitializeComponent();
 
-            LoginSwitch.IsToggled = (App.Account != null) ? true : false;
+            LoginSwitch.On = (App.Account != null) ? true : false;
 
-            LoginSwitch.Toggled             += LoginSwitch_Toggled;
-            CookieButton.Clicked            += CookieButton_Clicked;
-            PhotoImage_Camera.Clicked       += CameraButtonClicked;
-            PhotoImage_Gallery.Clicked      += GalleryButtonClicked;
+            LoginSwitch.OnChanged += LoginSwitch_Toggled;
+            CookieButton.Clicked += CookieButton_Clicked;
+            CameraButton.Clicked += CameraButtonClicked;
+            GalleryButton.Clicked += GalleryButtonClicked;
 
             // DependencyService!! 
             // Xamarin.Form에서 Native Platform 기능 가져다 쓰기. 런타임에 작동
@@ -37,10 +37,10 @@ namespace Demo
 
             var picDir = directoryService.GetExternalPictureDir();
             var galleryPath = Path.Combine(picDir, "Sample/test_1.jpg");
-            PhotoImage_Gallery.Source = ImageSource.FromFile(galleryPath);
+            Image_Gallery.Source = ImageSource.FromFile(galleryPath);
 
             // Url Image Get Test
-            PhotoImage_URI.Source = new UriImageSource() { Uri = new Uri("https://aka.ms/campus.jpg") };
+            Image_Uri.Source = new UriImageSource() { Uri = new Uri("https://aka.ms/campus.jpg") };
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Demo
             await DisplayAlert("AlbumPath", photo.AlbumPath, "OK");
 
             if (photo != null)
-                PhotoImage_Camera.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+                Image_Camera.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Demo
 
             await DisplayAlert("File Location", file.Path, "OK");
 
-            PhotoImage_Gallery.Source = ImageSource.FromStream(() =>
+            Image_Gallery.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
                 return stream;

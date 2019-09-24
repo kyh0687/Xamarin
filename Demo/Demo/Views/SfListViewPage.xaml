@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:Demo.ViewModels"
+             mc:Ignorable="d"
+             x:Class="Demo.Views.SfListViewPage">
+    
+    <StackLayout Orientation="Vertical">
+
+        <Label Text="SfListView"/>
+        <Label Text="ListView 학습......"/>
+
+        <syncfusion:SfListView x:Name="listView" ItemSize ="200" Orientation="Horizontal">
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate x:DataType="models:Goods">
+                    <Frame x:Name="frame" HasShadow="True" Padding="2" Margin="10">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Fill">
+                            <Image Source="{Binding Image}" HorizontalOptions="End" />
+                            <Label Text = "{Binding Name}" FontSize="15" TextColor="Black"/>
+                            <Label Text = "{Binding Description}" FontSize="10" TextColor="Pink"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </StackLayout>
+</ContentPage>
