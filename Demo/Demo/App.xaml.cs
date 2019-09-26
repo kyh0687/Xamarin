@@ -1,4 +1,6 @@
 ﻿using Demo.ViewModels;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Push;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -45,6 +47,11 @@ namespace Demo
             MainPage = new NavigationPage(new TabbedMainPage());
         }
 
+        protected override void OnStart()
+        {
+            base.OnStart();
+            
+        }
 
         
     }
