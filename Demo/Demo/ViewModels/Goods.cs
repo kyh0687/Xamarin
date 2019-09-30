@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Demo.ViewModels
 {
+    /// <summary>
+    /// 상품
+    /// </summary>
     public class Goods
     {
         public int Id { get; set; }

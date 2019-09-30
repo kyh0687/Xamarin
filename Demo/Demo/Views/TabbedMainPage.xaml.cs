@@ -30,7 +30,6 @@ namespace Demo
 
             // Tab Item은 5개가 MAX임
             Children.Add(GoodsPage);
-            //Children.Add(GoodsPageSf);
             Children.Add(SettingPage);
             Children.Add(ControlTestPage);
         }

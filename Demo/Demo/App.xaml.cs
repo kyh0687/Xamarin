@@ -2,6 +2,7 @@
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Push;
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -40,9 +41,13 @@ namespace Demo
             }
         }
 
+        public static IList<Purchase> PurchaseHistory { get; set; }
+
         public App()
         {
             InitializeComponent();
+
+            PurchaseHistory = new List<Purchase>();
 
             MainPage = new NavigationPage(new TabbedMainPage());
         }
